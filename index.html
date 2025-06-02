@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Pessoal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Victor Augusto Barbosa Moni</h1>
+        <nav>
+          <ul>
+            <li><a class="scroll-link" href="#sobre">Sobre</a></li>
+            <li><a class="scroll-link" href="#projetos">Projetos</a></li>
+            <li><a class="scroll-link" href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="sobre">
+      <div class="container">
+        <h2>Sobre</h2>
+        <p>
+          Olá! Eu sou o Victor Augusto, desenvolvedor Full-Stack com 3 anos de
+          experiência em Java, Spring Boot, Angular e React. Atualmente trabalho
+          na Search Price Soluções Tecnológicas, criando soluções web
+          responsivas e seguras. Aqui, compartilho um pouco sobre o que faço e
+          alguns projetos que já desenvolvi.
+        </p>
+        <p>
+          Meu objetivo é me aperfeiçoar cada vez mais em backend (especialmente
+          Spring Boot e Node.js) e no frontend com Angular e React + Vite. Fora
+          do código, curto pedalar e aprender sobre metodologias ágeis e DevOps.
+        </p>
+      </div>
+    </section>
+    <section id="projetos">
+      <div class="container">
+        <h2>Projetos</h2>
+        <div class="cards">
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/400x160.png?text=Projeto+1"
+              alt="Projeto 1"
+            />
+            <div class="card-content">
+              <h3>Backend de Loja Virtual (Spring Boot + MySQL)</h3>
+              <p>
+                Aplicação Java baseada em Spring Boot cujo objetivo é expor uma
+                API REST completa para gerenciar um sistema de loja virtual. Ele
+                encapsula toda a lógica de negócio e persistência relacionada a
+                usuários, produtos e pedidos, oferecendo:
+              </p>
+              <ul>
+                <li>
+                  Autenticação e Autorização com JWT, permitindo papéis
+                  (ROLE_USER e ROLE_ADMIN). Documentação automática de endpoints
+                  via Swagger/OpenAPI, usando interfaces definidas como
+                  contratos.
+                </li>
+                <li>
+                  Tratamento unificado de erros por meio de um handler global,
+                  retornando respostas padronizadas.
+                </li>
+                <li>
+                  Paginação e ordenação de listas de recursos (produtos e
+                  pedidos), para suportar grandes volumes de dados. Conversão
+                  entre entidades JPA e DTOs, garantindo que apenas as
+                  informações necessárias sejam expostas à camada externa.
+                </li>
+                <li>
+                  Validações de entrada com Bean Validation (anotações como
+                  @NotNull, @Size, etc.) e exemplos/documentações via Swagger.
+                </li>
+              </ul>
+              <a
+                href="https://github.com/victormoni/ecommerce-backend"
+                target="_blank"
+                >Ver no GitHub →</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/400x160.png?text=Projeto+2"
+              alt="Projeto 2"
+            />
+            <div class="card-content">
+              <h3>Frontend de Loja Virtual em Angular 19</h3>
+              <p>
+                Aplicação em Angular (v19+) que consome a API REST do
+                ecommerce-backend. Em linhas gerais, ele deve permitir que o
+                usuário:
+              </p>
+              <li>Se registre e faça login (autenticação via JWT).</li>
+              <li>
+                Navegue pela lista de produtos com paginação e filtros básicos.
+              </li>
+              <li>Veja detalhes de cada produto.</li>
+              <li>Adicione produtos a um carrinho de compras.</li>
+              <li>
+                Finalize o pedido (checkout), informando endereço e confirmando
+                pagamento.
+              </li>
+              <li>
+                Usuários com papel ADMIN podem criar/editar/deletar produtos a
+                partir de um painel administrativo.
+              </li>
+              <li>
+                Veja a lista de pedidos já realizados (para usuário comum) ou
+                todos os pedidos (para ADMIN).
+              </li>
+              <a
+                href="https://github.com/victormoni/ecommerce-frontend"
+                target="_blank"
+                >Ver no GitHub →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contato">
+      <div class="container">
+        <h2>Contato</h2>
+        <form
+          id="form-contato"
+          action="mailto:victor-moin@hotmail.com"
+          method="POST"
+          enctype="text/plain"
+        >
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>
+        © 2025 Victor Augusto Barbosa Moni. Feito com foco e código.
+        <a href="https://github.com/victormoni" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/victormoni/" target="_blank"
+          >LinkedIn</a
+        >
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
