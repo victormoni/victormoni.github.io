@@ -106,7 +106,7 @@
     }
 
     .card-content {
-      padding: 15px;
+      padding: 20px 30px;
       display: flex;
       flex-direction: column;
     }

@@ -45,76 +45,103 @@
         <h2>Projetos</h2>
         <div class="cards">
           <div class="card">
-            <img src="assets/SpringBootAndMySQL.png" alt="Projeto 1" />
+            <img src="assets/LojaVirtual.png" alt="Projeto 1" />
             <div class="card-content">
-              <h3>Backend de Loja Virtual (Spring Boot + MySQL)</h3>
+              <h3>
+                Loja Virtual Full Stack (Angular 19 + Spring Boot + MySQL)
+              </h3>
               <p>
-                Aplicação Java baseada em Spring Boot cujo objetivo é expor uma
-                API REST completa para gerenciar um sistema de loja virtual. Ele
-                encapsula toda a lógica de negócio e persistência relacionada a
-                usuários, produtos e pedidos, oferecendo:
+                Projeto completo de uma aplicação full stack desenvolvida com
+                Angular 19 no frontend, Spring Boot no backend e MySQL como
+                banco de dados relacional. A solução visa simular um sistema de
+                e-commerce moderno, robusto e seguro, com funcionalidades
+                essenciais para o gerenciamento de usuários, produtos e pedidos.
               </p>
+              <h4>Backend (Spring Boot)</h4>
               <ul>
                 <li>
-                  Autenticação e Autorização com JWT, permitindo papéis
-                  (ROLE_USER e ROLE_ADMIN). Documentação automática de endpoints
-                  via Swagger/OpenAPI, usando interfaces definidas como
-                  contratos.
+                  API RESTful estruturada com Spring Boot, utilizando
+                  arquitetura em camadas (Controller, Service, Repository) e
+                  mapeamento com JPA para persistência no banco de dados MySQL.
                 </li>
                 <li>
-                  Tratamento unificado de erros por meio de um handler global,
-                  retornando respostas padronizadas.
+                  Autenticação e Autorização baseada em JWT, com controle de
+                  acesso por perfis (<code>ROLE_USER</code> e
+                  <code>ROLE_ADMIN</code>).
                 </li>
                 <li>
-                  Paginação e ordenação de listas de recursos (produtos e
-                  pedidos), para suportar grandes volumes de dados. Conversão
-                  entre entidades JPA e DTOs, garantindo que apenas as
-                  informações necessárias sejam expostas à camada externa.
+                  Endpoints documentados automaticamente com Swagger/OpenAPI,
+                  com uso de interfaces como contratos da API.
                 </li>
                 <li>
-                  Validações de entrada com Bean Validation (anotações como
-                  @NotNull, @Size, etc.) e exemplos/documentações via Swagger.
+                  Tratamento global de exceções via
+                  <code>@ControllerAdvice</code>, retornando mensagens
+                  padronizadas e amigáveis ao cliente.
+                </li>
+                <li>
+                  Paginação e ordenação com <code>Pageable</code>, para
+                  facilitar navegação em grandes conjuntos de dados.
+                </li>
+                <li>
+                  Conversão entre entidades e DTOs por meio de mapeadores
+                  dedicados, garantindo segurança e desacoplamento.
+                </li>
+                <li>
+                  Validações robustas com Bean Validation
+                  (<code>@NotNull</code>, <code>@Email</code>,
+                  <code>@Size</code>, etc.), incluindo mensagens customizadas e
+                  integração com Swagger.
                 </li>
               </ul>
+              <br />
+              <h4>Frontend (Angular 19)</h4>
+              <ul>
+                <li>
+                  Interface SPA (Single Page Application) desenvolvida com
+                  Angular 19 e SCSS, proporcionando experiência fluida ao
+                  usuário.
+                </li>
+                <li>
+                  Tela de login com autenticação via JWT, persistência de sessão
+                  e controle de acesso por perfil.
+                </li>
+                <li>
+                  Listagem de produtos e pedidos com filtros, paginação e
+                  ordenação.
+                </li>
+                <li>
+                  Formulários reativos com validações em tempo real, utilizando
+                  <code>ReactiveForms</code>.
+                </li>
+                <li>
+                  Consumo de APIs RESTful usando <code>HttpClient</code> e
+                  serviços injetáveis.
+                </li>
+                <li>
+                  Componentes reutilizáveis e estilizados conforme o handoff de
+                  UI.
+                </li>
+              </ul>
+              <br />
+              <h4>Banco de Dados (MySQL)</h4>
+              <ul>
+                <li>
+                  Modelo relacional com tabelas normalizadas:
+                  <code>users</code>, <code>products</code>,
+                  <code>orders</code> e <code>order_items</code>.
+                </li>
+                <li>
+                  Relacionamentos com integridade referencial (ex: um pedido
+                  contém vários itens).
+                </li>
+                <li>
+                  Script de criação automática com Hibernate, pronto para
+                  migrações com Flyway ou Liquibase.
+                </li>
+              </ul>
+              <br />
               <a
                 href="https://github.com/victormoni/ecommerce-backend"
-                target="_blank"
-                >Ver no GitHub →</a
-              >
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/Angular19.png" alt="Projeto 2" />
-            <div class="card-content">
-              <h3>Frontend de Loja Virtual em Angular 19</h3>
-              <p>
-                Aplicação em Angular (v19+) que consome a API REST do
-                ecommerce-backend. Em linhas gerais, ele deve permitir que o
-                usuário:
-              </p>
-              <ul>
-                <li>Se registre e faça login (autenticação via JWT).</li>
-                <li>
-                  Navegue pela lista de produtos com paginação e filtros
-                  básicos.
-                </li>
-                <li>Veja detalhes de cada produto.</li>
-                <li>Adicione produtos a um carrinho de compras.</li>
-                <li>
-                  Finalize o pedido (checkout), informando endereço e
-                  confirmando pagamento.
-                </li>
-                <li>
-                  Usuários com papel ADMIN podem criar/editar/deletar produtos a
-                  partir de um painel administrativo.
-                </li>
-                <li>
-                  Veja a lista de pedidos já realizados (para usuário comum) ou
-                  todos os pedidos (para ADMIN).
-                </li>
-              </ul>
-              <a
-                href="https://github.com/victormoni/ecommerce-frontend"
                 target="_blank"
                 >Ver no GitHub →</a
               >
