@@ -5,14 +5,8 @@ Esta é a página pessoal do Victor Augusto Barbosa Moni, publicada via GitHub P
 ## Sobre
 
 - Desenvolvedor Full-Stack (Java, Spring Boot, Angular, React)
-- Apaixonado por metodologias ágeis, DevOps e ciclismo em jejum
+- Apaixonado por metodologias ágeis e DevOps
 
 ## Projetos Destaque
 
-- **Loja Virtual** (Spring Boot + Angular) – Backend seguro com JWT e frontend responsivo
-
-## Como Rodar Localmente
-
-1. Clone:
-   git clone https://github.com/victormoni/victormoni.github.io.git
-   cd victormoni.github.io
+- **Loja Virtual** (Spring Boot + Angular 19 + MySQL) – Backend seguro com JWT e frontend responsivo
